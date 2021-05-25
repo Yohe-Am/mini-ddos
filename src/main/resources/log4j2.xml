@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration packages="com.proj.ddos">
+	<properties>
+		<property name="pattern">%p- Time: %d{HH:mm:ss}%n Message: %m%n Thread: %t%n ========%n</property>
+	</properties>
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${pattern}" />
+		</Console>
+		<AppenderThing name="AppenderThing">
+			<PatternLayout pattern="${pattern}" />
+		</AppenderThing>
+	</appenders>
+	<loggers>
+		<root level="ALL">
+			<appender-ref ref="Console" />
+			<appender-ref ref="AppenderThing" />
+		</root>
+	</loggers>
+</configuration>
